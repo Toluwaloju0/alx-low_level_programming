@@ -1,5 +1,9 @@
 #include <stdio.h>
-/** printf */
+/**
+*main - Entry point
+*Description - printf
+*Return: 0
+*/
 
 int main(void)
 {

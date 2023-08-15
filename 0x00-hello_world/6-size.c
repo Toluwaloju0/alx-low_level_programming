@@ -1,5 +1,9 @@
 #include <stdio.h>
-/* size,territory */
+/**
+*main - Entry point
+*Description - size,territory
+*Return:0
+*/
 int main(void)
 
 {
