@@ -2,12 +2,18 @@
 #include "main.h"
 /**
 *print_alphabet - to print alphabet using putchar
+*main - to print alphabets
 *Return: void
 */
 
 void print_alphabet(void);
 
 int main(void)
+{
+	print_alphabet();
+	return (0);
+}
+void print_alphabet(void)
 {
 	int a = 97;
 
@@ -17,5 +23,4 @@ int main(void)
 		a++;
 	}
 	putchar('\n');
-	return (0);
 }
