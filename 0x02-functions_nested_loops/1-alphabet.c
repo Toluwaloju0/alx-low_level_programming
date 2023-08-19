@@ -1,9 +1,13 @@
 #include <stdio.h>
+#include "main.h"
 /**
 *print_alphabet - to print alphabet using putchar
 *Return: void
 */
-void print_alphabet(void)
+
+void print_alphabet(void);
+
+int main(void)
 {
 	int a = 97;
 
@@ -13,14 +17,5 @@ void print_alphabet(void)
 		a++;
 	}
 	putchar('\n');
-}
-
-/**
-* main - print alphabet
-* Return: 0
-*/
-int main(void)
-{
-	print_alphabet();
 	return (0);
 }
