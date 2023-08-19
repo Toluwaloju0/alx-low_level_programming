@@ -1,27 +1,15 @@
-#include <stdio.h>
 #include "main.h"
-#include <1-main.c>
 /**
-*print_alphabet - to print alphabet using putchar
-*main - to print alphabets
-*Return: void
+* print_alphabet - print all alphabet in lowercase
 */
 
-void print_alphabet(void);
-
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
 void print_alphabet(void)
 {
-	int a = 97;
+	char letter;
 
-	while (a <= 122)
+	for (letter = 'a'; letter <= 'z'; letter++)
 	{
-		putchar(a);
-		a++;
+		_putchar(letter);
 	}
-	putchar('\n');
+	_putchar('\n');
 }
