@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* reset_to_98 - tom add 98 to the variable in *n
+* reset_to_98 - to add 98 to the variable in *n
 * @*n: a pointer to n
 * *@n: an integer
 * Return: int *n
