@@ -4,8 +4,10 @@
 * @int: am integer
 * Return: int
 */
-int _abs(int a)
+int _abs(int)
 {
+	int a;
+
 	if (a >= 0)
 	{
 		return (a);
