@@ -6,9 +6,9 @@
 */
 void puts2(char *str)
 {
-	int i = char s;
+	int i = char str;
 
-	while (int i % 2 = 0)
+	while (i % 2 == 0)
 	{
 		putchar(i);
 		i++;
