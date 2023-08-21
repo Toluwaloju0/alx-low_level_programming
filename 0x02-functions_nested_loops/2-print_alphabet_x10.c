@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 /**
 *print_alphabet_x10 - print alphabets 10 times
@@ -15,21 +14,11 @@ void print_alphabet_x10(void)
 
 		while (c < 123)
 		{
-			putchar(c);
+			_putchar(c);
 			c++;
 		}
 
-		putchar('\n');
+		_putchar('\n');
 		b++;
 	}
-}
-
-/**
-*main - check the code
-*Return: 0
-*/
-int main(void)
-{
-	print_alphabet_x10();
-	return (0);
 }
