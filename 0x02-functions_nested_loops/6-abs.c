@@ -1,10 +1,10 @@
 #include "main.h"
 /**
 * _abs - to print absolute value
-* @int: am integer
+* @a: an integer
 * Return: int
 */
-int _abs(int)
+int _abs(int a)
 {
 	int a;
 
