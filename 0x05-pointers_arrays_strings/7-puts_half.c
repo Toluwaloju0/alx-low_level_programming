@@ -20,7 +20,7 @@ void puts_half(char *str)
 	{
 		int start = (l - 1) / 2;
 	}
-	int i = start
+	int i = start;
 
 	while (i <= l)
 	{
