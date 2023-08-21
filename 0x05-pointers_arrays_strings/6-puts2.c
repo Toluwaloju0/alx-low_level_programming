@@ -6,12 +6,15 @@
 */
 void puts2(char *str)
 {
-	int i = char *str;
+	int i = 0;
 
-	while (i % 2 == 0)
+	while (str[i] != '\0')
 	{
-		putchar(i);
+		if (i % 2 == 0)
+		{
+			printf("%c", str[i]);
+		}
 		i++;
 	}
-	putchar('\n');
+	printf("\n");
 }
