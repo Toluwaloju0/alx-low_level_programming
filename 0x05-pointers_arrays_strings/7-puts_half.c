@@ -6,15 +6,27 @@
 */
 void puts_half(char *str)
 {
-	int i = 0;
+	int l = 0;
+	int start;
 
-	while (str[i] != '\0')
+	while (str[l] != '\0')
 	{
-		if (i % 2 != 0)
-		{
-			printf("%c", str[i]);
-		}
-		i++;
+		l++;
+	}
+	if (l % 2 == 0)
+	{
+		int start = l / 2;
+	}
+	else
+	{
+		int start = (l - 1) / 2;
+	}
+	int i = start
+
+	while (i <= l)
+	{
+		printf("%c", str[i]);
+		i++
 	}
 	printf("\n");
 }
