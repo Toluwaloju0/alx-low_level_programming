@@ -5,5 +5,5 @@
 */
 void _puts(char *str)
 {
-	return (write(1, &*str, 1));
+	printf("%s\n", str);
 }
