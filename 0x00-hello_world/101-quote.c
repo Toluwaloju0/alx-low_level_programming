@@ -4,8 +4,9 @@
 * @c: character to be printed
 * Return: 1
 */
-extern int printf (const char *c)
+int main(void) 
 {
-	("and that piece of art is useful\" - Dora Korpar, 2015-10-19");
+	FILE *file = stderr;
+	fprintf(file, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
 	return (1);
 }
