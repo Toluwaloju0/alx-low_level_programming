@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <strlen.h>
 /**
 * puts_half - to input the other half of a string
 * @str: string given
@@ -13,6 +14,7 @@ void puts_half(char *str)
 	{
 		l++;
 	}
+	return (l);
 	while (i <= l)
 	{
 		printf("%c", str[i]);
