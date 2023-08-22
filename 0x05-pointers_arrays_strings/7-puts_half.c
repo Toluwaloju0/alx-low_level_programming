@@ -13,7 +13,6 @@ void puts_half(char *str)
 	{
 		l++;
 	}
-	return (l);
 	while (i <= l)
 	{
 		printf("%c", str[i]);
