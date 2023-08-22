@@ -7,7 +7,7 @@
 */
 void print_array(int *a, int n)
 {
-	int t[n];
+	t[n];
 
 	while (n >= 0)
 	{
