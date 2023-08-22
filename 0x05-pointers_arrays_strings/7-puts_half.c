@@ -7,12 +7,13 @@
 void puts_half(char *str)
 {
 	int l = 0;
-	int i = l / 2;
 
 	while (str[l] != '\0')
 	{
 		l++;
 	}
+	int i = l / 2
+
 	while (i <= l)
 	{
 		printf("%c", str[i]);
