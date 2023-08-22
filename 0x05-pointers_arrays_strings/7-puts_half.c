@@ -7,6 +7,7 @@
 void puts_half(char *str)
 {
 	int l = 0;
+	int i;
 
 	while (str[l] != '\0')
 	{
@@ -14,13 +15,12 @@ void puts_half(char *str)
 	}
 	if (l % 2 == 0)
 	{
-		int start = l / 2;
+		int i = l / 2;
 	}
 	else
 	{
-		int start = (l - 1) / 2;
+		int i = (l - 1) / 2;
 	}
-	int i = start;
 
 	while (i <= l)
 	{
