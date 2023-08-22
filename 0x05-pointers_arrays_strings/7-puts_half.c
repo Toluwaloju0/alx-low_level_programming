@@ -1,23 +1,19 @@
 #include "main.h"
 #include <stdio.h>
+#include <string.h>
 /**
 * puts_half - to input the other half of a string
 * @str: string given
 */
 void puts_half(char *str)
 {
-	int l = 0;
+	int i = strlen[str];
+	int l = i / 2;
 
-	while (str[l] != '\0')
+	while (l <= i)
 	{
+		putchar(str[l]);
 		l++;
 	}
-	int i = l / 2;
-
-	while (i <= l)
-	{
-		printf("%c", str[i]);
-		i++;
-	}
-	printf("\n");
+	putchar('\n);
 }
