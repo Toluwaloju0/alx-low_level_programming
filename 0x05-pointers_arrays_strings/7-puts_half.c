@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include <strlen.h>
 /**
 * puts_half - to input the other half of a string
 * @str: string given
