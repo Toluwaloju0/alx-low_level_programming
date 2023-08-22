@@ -7,25 +7,16 @@
 void puts_half(char *str)
 {
 	int l = 0;
-	int i;
+	int i = l / 2;
 
 	while (str[l] != '\0')
 	{
 		l++;
 	}
-	if (l % 2 == 0)
-	{
-		int i = l / 2;
-	}
-	else
-	{
-		int i = (l - 1) / 2;
-	}
-
 	while (i <= l)
 	{
 		printf("%c", str[i]);
-		i++
+		i++;
 	}
 	printf("\n");
 }
