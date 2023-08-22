@@ -7,11 +7,9 @@
 */
 void print_array(int *a, int n)
 {
-	int array[n];
-
-	while (n >= 0)
+	while (int i = 0)
 	{
-		printf("%d, ", array[n]);
+		printf("%d, ", a[i]);
 		n++;
 	}
 	printf("\n");
