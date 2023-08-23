@@ -2,6 +2,7 @@
 
 /**
 * main - causes an infinite loop
+* @\\o/: the printed character
 * Return: 0
 */
 
@@ -9,9 +10,9 @@ int main(void)
 {
 	int i;
 
-	printf("Infinite loop incoming :(\n");
-	i = 0;
-/*
+	printf("Infinite loop incoming :(\n");/**
+*	i = 0;
+*
 *while (i < 10)
 *{
 *	putchar(i);
