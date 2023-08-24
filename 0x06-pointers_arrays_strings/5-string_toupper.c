@@ -2,17 +2,17 @@
 #include <ctype.h>
 /**
 * *string_toupper - to change all lowercase character to upper cases
-* @ptr: the string to be edited
+* @a: the string to be edited
 * Return: the edited character
 */
-char *string_toupper(char *ptr)
+char *string_toupper(char *a)
 {
-	int a = 0;
+	int b = 0;
 
-	while (ptr[a] != '\0')
+	while (a[b] != '\0')
 	{
-		ptr[a] = toupper(ptr[a];
-		a++;
+		a[b] = toupper(ptr[a];
+		b++;
 	}
-	return (ptr)
+	return (a);
 }
