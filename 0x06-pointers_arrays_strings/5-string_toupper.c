@@ -11,7 +11,7 @@ char *string_toupper(char *a)
 
 	while (a[b] != '\0')
 	{
-		a[b] = toupper(ptr[a];
+		a[b] = toupper(a[b]);
 		b++;
 	}
 	return (a);
