@@ -2,6 +2,7 @@
 /**
 * reverse_array - to reverse the content of an array
 * @a: the array
+* @n: the number of characters in a
 * @n number of elements in the array
 */
 void reverse_array(int *a, int n)
