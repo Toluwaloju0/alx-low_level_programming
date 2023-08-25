@@ -5,9 +5,9 @@
 * @str: the given string
 * Return: the edited string
 */
-char *leet(char *str)
+char *leet(char *p)
 {
-	char *ptr = str;
+	char *ptr = p;
 
 	while (*ptr != '\0')
 	{
@@ -31,7 +31,11 @@ char *leet(char *str)
 		{
 			*ptr = '1';
 		}
+		else
+		{
+			continue;
+		}
 		ptr++;
 	}
-	return (str);
+	return (p);
 }
