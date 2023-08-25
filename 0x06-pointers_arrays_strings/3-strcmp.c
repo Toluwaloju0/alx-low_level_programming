@@ -36,10 +36,10 @@ int _strcmp(char *s1, char *s2)
 			}
 			else
 			{
-				i++;
-				j++;
-				continue;
+				return (0);
 			}
+			i++;
+			j++;
 		}
 	return (0);
 	}
