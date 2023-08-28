@@ -9,9 +9,9 @@
 */
 char *_memset(char *s, char b, unsigned int n)
 {
-	int i = strlen(s);
+	unsigned int i = strlen(s);
 
-	while (s[i] <= s[n])
+	while (i < n)
 	{
 		s[i] = b;
 		i++;
