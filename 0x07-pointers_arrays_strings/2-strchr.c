@@ -9,16 +9,18 @@
 char *_strchr(char *s, char C)
 {
 	int i =0;
-	char a[50];
 
 	while (s[i] != '\0')
 	{
 		if (s[i] == C)
 		{
-			s[i] = a[50];
-			break;
+			return (s);
+		}
+		else
+		{
+			return (NULL);
 		}
 		i++;
 	}
-	return (a);
+	return (s);
 }
