@@ -3,12 +3,12 @@
 /**
 * *_strchr - to find a character in a string
 * @s: the string to be searched
-* @c: the character to be searches for
+* @C: the character to be searches for
 * Return: a pointer to the character
 */
 char *_strchr(char *s, char C)
 {
-	int i =0;
+	int i = 0;
 	char *p;
 
 	while (s[i] != '\0')
