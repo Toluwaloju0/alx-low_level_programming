@@ -1,8 +1,8 @@
-#include "main.h"
 #include <stdio.h>
+#include "main.h"
 /**
-* print_chessboard - to print a chess board pattern
-* @a[8]: a two dimensional array with 8 r0ws and columns
+* print_chessboard - to print a chess board
+* @a: an array with 8 rows and 8 columns
 */
 void print_chessboard(char (*a)[8])
 {
