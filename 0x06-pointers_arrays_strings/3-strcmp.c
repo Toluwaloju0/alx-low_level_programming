@@ -10,6 +10,8 @@ int _strcmp(char *s1, char *s2)
 {
 	int a = strlen(s1);
 	int b = strlen(s2);
+	int i = 0;
+	int j = 0;
 
 	if (a > b)
 	{
@@ -21,13 +23,13 @@ int _strcmp(char *s1, char *s2)
 	}
 	else
 	{
-		while (*s1 != '\0' && *s2 != '\0')
+		while (s1[i] != '\0' && s2[j] != '\0')
 		{
-			if (*s1 > *s2)
+			if (s1[i] > s2[j])
 			{
 				return (15);
 			}
-			else if (*s1 < *s2)
+			else if (s1[i] < s2[j])
 			{
 				return (-15);
 			}
@@ -35,8 +37,8 @@ int _strcmp(char *s1, char *s2)
 			{
 				return (0);
 			}
-			s1++;
-			s2++;
+			i++;
+			j++;
 		}
 		return (0);
 	}
