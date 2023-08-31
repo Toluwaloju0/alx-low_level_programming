@@ -8,8 +8,8 @@
  */
 int main(void)
 {
-    char s1[] = "i";
-    char s2[] = "a";
+    char s1[] = "Holberton";
+    char s2[] = "Holbeerton";
 
     printf("%d\n", _strcmp(s1, s2));
     printf("%d\n", _strcmp(s2, s1));
