@@ -2,7 +2,7 @@
 #include <string.h>
 /**
 * *leet - to change given letters to numbers
-* @str: the given string
+* @s: the given string
 * Return: the edited string
 */
 char *leet(char *s)
