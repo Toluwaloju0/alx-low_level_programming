@@ -5,37 +5,33 @@
 * @str: the given string
 * Return: the edited string
 */
-char *leet(char *p)
+char *leet(char *s)
 {
-	char *ptr = p;
+	int i = 0;
 
-	while (*ptr != '\0')
+	while (s[i] != '\0')
 	{
-		if (*ptr == 'a' || *ptr == 'A')
+		if (s[i] == 'A' || s[i] == 'a')
 		{
-			*ptr = '4';
+			s[i] = '4';
 		}
-		else if (*ptr == 'e' || *ptr == 'E')
+		else if (s[i] == 'E' || s[i] == 'e')
 		{
-			*ptr = '3';
+			s[i] = '3';
 		}
-		else if (*ptr == 'o' || *ptr == 'O')
+		else if (s[i] == 'O' || s[i] == 'o')
 		{
-			*ptr = '0';
+			s[i] = '0';
 		}
-		else if (*ptr == 't' || *ptr == 'T')
+		else if (s[i] == 'T' || s[i] == 't')
 		{
-			*ptr = '7';
+			s[i] = '7';
 		}
-		else if (*ptr == 'l' || *ptr == 'L')
+		else if (s[i] == 'L' || s[i] == 'l')
 		{
-			*ptr = '1';
+			s[i] = '1';
 		}
-		else
-		{
-			continue;
-		}
-		ptr++;
+		i++;
 	}
-	return (p);
+	return (s);
 }

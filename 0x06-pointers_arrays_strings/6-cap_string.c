@@ -15,7 +15,7 @@ char *cap_string(char *a)
 		{
 			a[i] = toupper(a[i]);
 		}
-		else if (a[i - 1] == '\n' || a[i -1] == '\t')
+		else if (a[i - 1] == '\n' || a[i - 1] == '\t')
 		{
 			a[i] = toupper(a[i]);
 		}
