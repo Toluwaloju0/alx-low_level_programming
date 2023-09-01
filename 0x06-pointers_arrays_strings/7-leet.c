@@ -15,6 +15,10 @@ char *leet(char *s)
 		{
 			s[i] = '4';
 		}
+		else if (s[i] == 'E' || s[i] == 'e')
+		{
+			s[i] = '3';
+		}
 		i++;
 	}
 	return (s);
