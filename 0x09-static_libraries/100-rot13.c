@@ -12,4 +12,5 @@ char *rot13(char *a)
 	{
 		a[i] + 13;
 		i++;
-		i
+	}
+}
