@@ -7,18 +7,24 @@
 * @argv: the char to be printed from stdout
 * Return: 0
 */
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
-	int i = 0;
+	int i = 1;
 	int sum = 0;
 
-	if (argv != isalpha(*argv))
+	if (i == argc)
 	{
 		printf("0\n");
+		return (0);
 	}
 	while (i < argc)
 	{
-		if (argv[i] >= 'a' && argv[i] <= 'z')
+		if (atoi(argv[i]) < 0)
+		{
+			i++;
+			continue;
+		}
+		else if (isdigit(atoi(argv[i])) != 0)
 		{
 			printf("Error\n");
 			return (1);
@@ -26,9 +32,10 @@ int main(int argc, char* argv[])
 		else
 		{
 			sum = sum + atoi(argv[i]);
-			printf("%d\n", sum);
 		}
 		i++;
 	}
+	printf("%d\n", sum);
+
 	return (0);
 }
