@@ -17,13 +17,13 @@ void print_diagsums(int *a, int size)
 
 	while (i < size && j >= 0)
 	{
-		d = a[i][j] + d;
+		d = *a + d;
 		i++;
 		j--;
 	}
 	while (l >= 0 && k < size)
 	{
-		c = a[l][k] + c;
+		c = *a + c;
 		l--;
 		k++;
 	}

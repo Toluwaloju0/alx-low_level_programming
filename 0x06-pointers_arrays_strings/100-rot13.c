@@ -10,6 +10,12 @@ char *rot13(char *a)
 
 	while (a[i] != '\0')
 	{
-		a[i] + 13;
+		a[i] = a[i] + 13;
+		if (a[i] > 90)
+		{
+			a[i] = 60 + (a[i] - 26);
+		}
 		i++;
-		i
+	}
+	return (a);
+}

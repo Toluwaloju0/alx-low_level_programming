@@ -6,15 +6,12 @@
 */
 int is_prime_number(int n)
 {
-	if (n %  == 0)
+	if (n <= 1 || n % 2 == 0)
 	{
 		return (0);
 	}
-	if (  > 0)
+	else if (n % is_prime_number(n - 1) == 0);
 	{
-		n--;
-		is_prime_number(n);
+		return (1);
 	}
-	return (1);
-	
 }

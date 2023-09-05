@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 			i++;
 			continue;
 		}
-		else if (isdigit(atoi(argv[i])) != 0)
+		if (argv[i] != isdigit(argv[i]))
 		{
 			printf("Error\n");
 			return (1);
