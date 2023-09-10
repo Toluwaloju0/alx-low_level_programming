@@ -43,7 +43,7 @@ int _atoi(char *s)
 			continue;
 		}
 	}
-	if (minus > plus)
+	if (minus > plus || minus == 1 || minus % 2 == 1)
 	{
 		sign = -1;
 	}
