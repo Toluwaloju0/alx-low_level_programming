@@ -10,11 +10,12 @@ int _atoi(char *s)
 {
 	int res = 0;
 	int i = 0;
+	int l = 0;
 	int minus = 0;
 	int plus = 0;
 	int sign = 1;
 
-	while (s[i] !='\0')
+	while (s[i] != '\0')
 	{
 		if (isdigit(s[i]))
 		{
@@ -22,29 +23,29 @@ int _atoi(char *s)
 		}
 		i++;
 	}
-	while (s[i] != '\0')
+	while (s[l] != '\0')
 	{
-		if (s[i] == '-')
+		if (s[l] == '-')
 		{
 			minus = minus + 1;
-			i++;
+			l++;
 			continue;
 		}
-		else if (s[i] == '+')
+		else if (s[l] == '+')
 		{
 			plus = plus + 1;
-			i++;
+			l++;
 			continue;
 		}
 		else
 		{
-			i++;
+			l++;
 			continue;
 		}
-		if (minus % 2 == 1)
-		{
-			sign = - 1;
-		}
+	}
+	if (minus > plus)
+	{
+		sign = -1;
 	}
 	return (res * sign);
 }
