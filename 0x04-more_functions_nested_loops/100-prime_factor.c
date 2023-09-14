@@ -1,39 +1,47 @@
 #include <stdio.h>
 #include <math.h>
-int is_prime(int num)
+/**
+* Maxprime - to find the prime of a number
+* @num: the nuber value
+* Return: long long number
+*/
+long Maxprime(long num)
 {
-	int i;
-	
-	for (i = 2; 1 <= sqrt(num); i++)
+	long currmaxprime = -1;
+	long i = 3;
+
+	if (num % 2 == 0)
 	{
-		if (num % i == 0)
+		currmaxprime = 2;
+		while (num % 2 == 0)
 		{
-			return (0);
+			num = num / 2;
 		}
 	}
-	return (1);
+	while (i <= sqrt(num))
+	{
+		while (num % 1 == 0)
+		{
+			currmaxprime = i;
+			num = num / i;
+		}
+		i += 2;
+	}
+	if (num > 2)
+	{
+		currmaxprime = num;
+	}
+	return (currmaxprime);
 }
 /**
-* main - to print the prime factor of a number
-* Return: 0
+* main - to print the largest prime number
+* Return: an integer
 */
 int main(void)
 {
-	long int number = 6128524751433;
-	long int largest_factor = 0;
+	long number = 612852475143;
+	long largestprimefactor = Maxprime(number);
 
-	for (int i = 2; i <= sqrt(number); i++)
-	{
-		if (number % i == 0)
-		{
-			if (is_prime(i))
-			{
-				largest_factor = i;
-			}
-			while (number % i == 0)
-			{
-				number /= i;
-			}
-		}
-	}
+	printf("Largest prime factor of %ld is: %ld\n", number, largestprimefactor);
+	return (0);
 }

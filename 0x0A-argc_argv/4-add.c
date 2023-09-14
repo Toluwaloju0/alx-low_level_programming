@@ -12,30 +12,33 @@ int main(int argc, char *argv[])
 	int i = 1;
 	int sum = 0;
 
-	if (i == argc)
+	if (argc == 1)
 	{
 		printf("0\n");
 		return (0);
 	}
 	while (i < argc)
 	{
-		if (atoi(argv[i]) < 0)
+		if (isdigit(argv[i]))
+		{
+			sum = sum + atoi(argv[i]);
+		}
+		else
+		{
+			printf("Error\n");
+			i++;
+		}
+/**		else if (atoi(argv[i]) < 0)
 		{
 			i++;
 			continue;
 		}
-		if (argv[i] != isdigit(argv[i]))
-		{
-			printf("Error\n");
-			return (1);
-		}
 		else
 		{
 			sum = sum + atoi(argv[i]);
-		}
+		}*/
 		i++;
 	}
 	printf("%d\n", sum);
-
 	return (0);
 }
