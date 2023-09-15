@@ -8,16 +8,11 @@
 */
 int _atoi(char *s)
 {
-	int res = 0;
-	int i = 0;
-	int l = 0;
-	int minus = 0;
-	int plus = 0;
-	int sign = 1;
+	int res = 0, i = 0, l = 0, minus = 0, plus = 0, sign = 1;
 
 	while (s[l] != '\0')
 	{
-		if (isdigit(s[l]))
+		if (isalpha(s[l + 1]))
 		{
 			break;
 		}
@@ -33,30 +28,21 @@ int _atoi(char *s)
 			l++;
 			continue;
 		}
-		else
-		{
-			l++;
-			continue;
-		}
+		l++;
 	}
 	while (s[i] != '\0')
 	{
 		if (isdigit(s[i]))
 		{
 			res = res * 10 + (s[i] - '0');
-		}
-		if (ispunct(s[i + 1]))
-		{
-			i++;
-			continue;
-		}
-		else if (isalpha(s[i + 1]))
-		{
-			break;
+			if (isalpha(s[i + 1]) || isalpha(s[i + 2]))
+			{
+				break;
+			}
 		}
 		i++;
 	}
-	if (minus > plus || minus == 1 || minus % 2 == 1)
+	if (minus > plus || minus % 2 == 1)
 	{
 		sign = -1;
 	}
