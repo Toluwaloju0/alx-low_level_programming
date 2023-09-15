@@ -15,16 +15,12 @@ int _atoi(char *s)
 	int plus = 0;
 	int sign = 1;
 
-	while (s[i] != '\0')
-	{
-		if (isdigit(s[i]))
-		{
-			res = res * 10 + (s[i] - '0');
-		}
-		i++;
-	}
 	while (s[l] != '\0')
 	{
+		if (isdigit(s[l]))
+		{
+			break;
+		}
 		if (s[l] == '-')
 		{
 			minus = minus + 1;
@@ -42,6 +38,23 @@ int _atoi(char *s)
 			l++;
 			continue;
 		}
+	}
+	while (s[i] != '\0')
+	{
+		if (isdigit(s[i]))
+		{
+			res = res * 10 + (s[i] - '0');
+		}
+		if (ispunct(s[i + 1]))
+		{
+			i++;
+			continue;
+		}
+		else if (isalpha(s[i + 1]))
+		{
+			break;
+		}
+		i++;
 	}
 	if (minus > plus || minus == 1 || minus % 2 == 1)
 	{
