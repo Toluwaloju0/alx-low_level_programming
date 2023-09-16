@@ -7,21 +7,21 @@
 */
 void print_number(int n)
 {
-	char s[20];
-	int a = 0;
-	int b;
-	int c = 0;
-
-	while (n != 0)
+	int a;
+	if (n < 0)
 	{
-		b = n % 10;
-		s[a] = b + '0';
-		n = n / 10;
-		a++;
+		_putchar('-');
+		n = n * -1;
 	}
-	while (c < 20)
+	else if (n == 0)
 	{
-		_putchar(s[c]);
-		c++;
+		_putchar('0');
+	}
+	while (n / 10 != 0)
+	{
+		n = n / 10;
+		a = n % 10;
+		_putchar(a + '0');
+		print_number(n);
 	}
 }

@@ -1,4 +1,5 @@
-#include"main.h"
+#include "main.h"
+#include <ctype.h>
 /**
 * *rot13 - to change a character to the one after 13 characters
 * @a: the string to be changed
@@ -10,10 +11,18 @@ char *rot13(char *a)
 
 	while (a[i] != '\0')
 	{
-		a[i] = a[i] + 13;
-		if (a[i] > 90)
+		if (isalpha(a[i]))
 		{
-			a[i] = 60 + (a[i] - 26);
+			a[i] = a[i] + 13;
+			if (a[i] > 'z' || a[i] > 'Z')
+			{
+				a[i] = a[i] - 26;
+			}
+		}
+		else
+		{
+			i++;
+			continue;
 		}
 		i++;
 	}
