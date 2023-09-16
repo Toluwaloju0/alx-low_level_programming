@@ -8,10 +8,10 @@
 */
 char *_strchr(char *s, char C)
 {
-	int i = 0;
+	int i = 0, j = strlen(s);
 	char *p;
 
-	while (s[i] != '\0')
+	while (i < j)
 	{
 		if (s[i] == C)
 		{
