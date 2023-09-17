@@ -8,28 +8,43 @@
 */
 int _atoi(char *s)
 {
-	int res = 0;
-	int sign = 1;
-	int i = 0;
+	int res = 0, i = 0, l = 0, minus = 0, plus = 0, sign = 1;
 
-	while (s[i] !='\0')
+	while (s[l] != '\0')
 	{
-		if (isspace(s[i]))
-		{
-			i++;
-			continue;
-		}
-		if (s[i] == '-' || s[i] == '+')
-		{
-			sign = (s[i] == '-') ? -1 : 1;
-			i++;
-		}
-		if (!isdigit(s[i]))
+		if (isalpha(s[l + 1]))
 		{
 			break;
 		}
-		res = res * 10 + (s[i] - '0');
+		if (s[l] == '-')
+		{
+			minus = minus + 1;
+			l++;
+			continue;
+		}
+		else if (s[l] == '+')
+		{
+			plus = plus + 1;
+			l++;
+			continue;
+		}
+		l++;
+	}
+	while (s[i] != '\0')
+	{
+		if (isdigit(s[i]))
+		{
+			res = res * 10 + (s[i] - '0');
+			if (isalpha(s[i + 1]) || isalpha(s[i + 2]))
+			{
+				break;
+			}
+		}
 		i++;
+	}
+	if (minus > plus || minus % 2 == 1)
+	{
+		sign = -1;
 	}
 	return (res * sign);
 }

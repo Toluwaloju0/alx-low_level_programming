@@ -1,5 +1,6 @@
 #include "main.h"
 #include <string.h>
+#include <ctype.h>
 /**
 * _strspn - to check for the number of times char accept appears in str
 * @s: the initial char to be checked
@@ -8,14 +9,17 @@
 */
 unsigned int _strspn(char *s, char *accept)
 {
-	int i = 0;
+	int i = 0, l, k = strlen(accept);
 	unsigned int j = 0;
-	
-	while (s[i] != '\0')
+
+	while (s[i] != ' ')
 	{
-		if (*accept == *s)
+		for (l = 0; l < k; l++)
 		{
-			j = *s;
+			if (accept[l] == s[i])
+			{
+				j = j + 1;
+			}
 		}
 		i++;
 	}
