@@ -13,7 +13,7 @@ void print_diagsums(int *a, int size)
 	{
 		while (j < size)
 		{
-			add1 = add1 + *(a + (k * j));
+			add1 = add1 + *(a + (k + j));
 			j++;
 		}
 		k--;
@@ -28,5 +28,4 @@ void print_diagsums(int *a, int size)
 		i++;
 	}
 	printf ("%d, %d\n", add1, add2);
-	return;
 }
