@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stddef.h>
 #include <stdio.h>
 /**
 * print_diagsums - to print the sum of the diagonals of a square matrix of integers
@@ -8,24 +7,26 @@
 */
 void print_diagsums(int *a, int size)
 {
-	int i = 0;
-	int j = size - 1;
-	int k = 0;
-	int l = size -1;
-	int c = 0;
-	int d = 0;
+	int add1 = 0, add2 = 0, i = 0, j = 0, k = size - 1, l = size - 1;
 
-	while (i < size && j >= 0)
+	while (k >= 0)
 	{
-		d = *a + d;
+		while (j < size)
+		{
+			add1 = add1 + *(a + (k * j));
+			j++;
+		}
+		k--;
+	}
+	while (i < size)
+	{
+		while (l >= 0)
+		{
+			add2 = add2 + *(a + (i * l));
+			l--;
+		}
 		i++;
-		j--;
 	}
-	while (l >= 0 && k < size)
-	{
-		c = *a + c;
-		l--;
-		k++;
-	}
-	printf ("%d, %d\n", d, c);
+	printf ("%d, %d\n", add1, add2);
+	return;
 }
