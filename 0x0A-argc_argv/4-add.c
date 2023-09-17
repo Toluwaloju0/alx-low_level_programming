@@ -9,7 +9,7 @@
 */
 int main(int argc, char *argv[])
 {
-	int i = 1;
+	int i, j;
 	int sum = 0;
 
 	if (argc == 1)
@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	}
 	for (i = 1; i < argc; i++)
 	{
-		if (!isdigit(argv[i][0]))
+		if (!isdigit(argv[i][2]))
 		{
 			printf("Error\n");
 			return (1);
