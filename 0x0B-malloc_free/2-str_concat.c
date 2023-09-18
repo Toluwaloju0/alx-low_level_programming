@@ -19,15 +19,21 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	while (s1[l] != '\0')
+	if (s1 != NULL)
 	{
-		k[l] = s1[l];
-		l++;
+		while (s1[l] != '\0')
+		{
+			k[l] = s1[l];
+			l++;
+		}
 	}
-	while (s2[m] != '\0')
+	if (s2 != NULL)
 	{
-		k[l + m] = s2[m];
-		m++;
+		while (s2[m] != '\0')
+		{
+			k[l + m] = s2[m];
+			m++;
+		}
 	}
 	return (k);
 }
