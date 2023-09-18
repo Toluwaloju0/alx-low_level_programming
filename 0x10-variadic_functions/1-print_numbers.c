@@ -1,5 +1,6 @@
 #include <stdarg.h>
 #include <stdio.h>
+#include <string.h>
 #include "variadic_functions.h"
 /**
 * print_numbers - to print numbers in a variadic funtion
@@ -21,7 +22,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			printf("\n");
 			return;
 		}
-		if (*separator == '\0')
+		if (strlen(separator) == 0)
 		{
 			printf(" ");
 		}
