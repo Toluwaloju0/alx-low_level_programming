@@ -24,13 +24,16 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		if (i == n - 1)
 		{
 			printf("\n");
-			return;
+			break;
 		}
-		if (strlen(separator) == 0)
+		if (separator != NULL)
+		{
+			printf("%s", separator);
+		}
+		else
 		{
 			continue;
 		}
-		printf("%s", separator);
 	}
 	va_end(print);
 }
