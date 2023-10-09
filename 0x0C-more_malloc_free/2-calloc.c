@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 /**
 * _calloc - to allocate memory using malloc
 * @nmemb: the number of elements to be allocated
@@ -20,5 +21,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
+	memset(i, 0, nmemb);
 	return (i);
 }
