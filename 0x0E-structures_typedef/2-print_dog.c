@@ -12,7 +12,7 @@ void print_dog(struct dog *d)
 	}
 	if (d->name == NULL)
 	{
-		printf("Name: (nili)\n");
+		printf("Name: (nil)\n");
 	}
 	else
 	{
