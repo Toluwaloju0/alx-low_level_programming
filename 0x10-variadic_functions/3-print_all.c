@@ -1,8 +1,6 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 #include <stdio.h>
-#include <stddef.h>
-#include <string.h>
 /**
 * print_all - to print based of format specifiers
 * @format: the format to be checked
@@ -41,6 +39,7 @@ void print_all(const char * const format, ...)
 		}
 		if (format[a + 1] == '\0')
 		{
+			va_end(i);
 			printf("\n");
 			return;
 		}
