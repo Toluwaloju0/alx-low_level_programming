@@ -15,11 +15,6 @@ void print_all(const char * const format, ...)
 	size_t a = 0;
 	char *j = ", ";
 
-	if (format == NULL)
-	{
-		printf("(nil)\n");
-		return;
-	}
 	va_start(i, format);
 	while (format[a] != '\0')
 	{
