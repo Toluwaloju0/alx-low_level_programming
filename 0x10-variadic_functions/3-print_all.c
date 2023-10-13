@@ -29,11 +29,11 @@ void print_all(const char * const format, ...)
 		}
 		else if (format[a] == 'i')
 		{
-			printf("%d, ", va_arg(i, int));
+			printf("%d", va_arg(i, int));
 		}
 		else if (format[a] == 'f')
 		{
-			printf("%f, ", va_arg(i, double));
+			printf("%f", va_arg(i, double));
 		}
 		else if (format[a] == 's')
 		{
