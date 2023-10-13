@@ -2,6 +2,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <stddef.h>
+#include <string.h>
 /**
 * print_all - to print based of format specifiers
 * @format: the format to be checked
@@ -11,7 +12,7 @@
 void print_all(const char * const format, ...)
 {
 	va_list i;
-	int a = 0;
+	size_t a = 0;
 	char *j = ", ";
 
 	if (format == NULL)
@@ -25,28 +26,30 @@ void print_all(const char * const format, ...)
 		if (format[a] == 'c')
 		{
 			putchar(va_arg(i, int));
-			printf("%s", j);
-			a++;
-			continue;
 		}
 		else if (format[a] == 'i')
 		{
-			printf("%d%s, ", va_arg(i, int), j);
-			a++;
-			continue;
+			printf("%d, ", va_arg(i, int));
 		}
 		else if (format[a] == 'f')
 		{
-			printf("%f%s, ", va_arg(i, double), j);
-			a++;
-			continue;
+			printf("%f, ", va_arg(i, double));
 		}
 		else if (format[a] == 's')
 		{
-			printf("%s%s", va_arg(i, char *), j);
+			printf("%s", va_arg(i, char *));
+		}
+		else
+		{
 			a++;
 			continue;
 		}
+		if (format[a + 1] == '\0')
+		{
+			printf("\n");
+			return;
+		}
 		a++;
+		printf("%s", j);
 	}
 }
