@@ -18,6 +18,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		separator = "";
 	}
+	if (n == 0)
+	{
+		printf("\n");
+		return;
+	}
 	va_start(i, n);
 	while (a < n)
 	{
