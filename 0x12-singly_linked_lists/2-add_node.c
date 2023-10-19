@@ -4,7 +4,7 @@
 /**
 * add_node - to add a node to the begginning if a list
 * @head: the first elemrnt of the list
-* str: the string to be added
+* @str: the string to be added
 * Return: pointer to the first elemrnt of the list
 */
 
