@@ -1,0 +1,43 @@
+		INFORMATION AND COMMUNICATION TECHNOLOGY	JS1
+		OBJECTIVE ANSWER ALL QUESTIONS
+1. The computer works under the guide of ____ (a) human beings (b) control unit (c) a program (d) a keyboard
+2. ___ is translating the data into machine0readable form (a) input (b) coding (c) processing (d) checking
+3. ___ generation computer used fibre optics (a) first (b) second (c) fourth (d) fifth
+4. Gottfried Leibniz invented a machine known as (a) adding machine (b) textile loom (c) stepped reckoner (d) napier bone
+5. ___ is a rectangular wooden frame (a) the pascaline (b) the logarithm (c) punch card (d) the abacus
+6. The following were used as early counting devices except (a) fingers (b) sticks (c) slide rule (d) broom
+7. The following are types of mechanical counting devices except (a) slide rule (b) speeding clock (c) napier bones (d) abacus
+8. Which of the following is not an electro_mechanoical counting device (a)John napier bone (b) stepper (c) jacquard loom (d) calculating clock
+9. We have ___ generarions of computers (a) 2 (b) 3 (c) 4 (d) 5
+10. Data gathering involves ___ (a) sourcing of data (b) analysing data (c) summarising data (d) editing data
+11. The characterixtic of computer that makes it carry out various activities is called ___ (a) versatility (b) accuracy (c) speed (d) consistency
+12. To store data on a permanent basis is called ___ (a) permanent storage (b) primary storage (c) secondary storage (d) output stage
+13. Fourth generation computers used ___ (a) vacumn tubes (b) transistors (c) artificial intelligence (d) large scale integrated circuit
+14. Which of the following designed a machine with similar element to mordern digital computers (a) Blaise Pascal (b) Charles Babbage (c) John Napier (d) Ada lovelace
+15. ___ developed the slide rule (a) John Napier (b) Ada Lovelace (c) William Oughtred (d) Charles Babbage
+16. The characteristics of first generation computers include the following except (a) they were heavy and bulky (b) they measured betwen 50ft and 100ft long (c) the computers weighed upto 300 tons (d) they used transistors to store and process data
+17. ____ are the raw material or inout to the computer (a) input (b) data (c) words (d) documents
+18. Some places the computer can be used include the following except (a) hospitals (b) street (c) market (d) school
+19. ___ devices receive data in its original format (a) output (b) input (c) storage (d) processing
+20. Second generation computers were ___ than third generation of computers (a) smaller (b) faster (c) more reliable (d) slower
+21. ___ means checking the data to see weather it is accurate or complete (a) coding (b) verification (c) manipulation (d) processing
+22. Can computer make mistake (a) yes (b) no (c) sometimes (d) always
+23. Data preparation involves the following except ___ (a) sorting (b) classifyng (c) processing data (d) summarizing
+24. The stage at which data is manipulated is called ___ (a) data collection (b) inout stage (c) processing stage (d) output stage
+25. The two steps involved in inputting data into computer is ___ and ___ (a) collection (b) sorting (c) coding (d) analysing
+26. The means by which computer receives spoken instruction is called ___ (a) fibre optics (b) voice recognition (c) vacumn tubes (d) microphone
+27. The stage at which data is manipulated is called ___ (a) Data collection (b) input stage (c) processing stage (d) output stage
+28. The third generarion if computers were manufactured between ___ (a) 1960 (b) 1964 (c) 1946 (d) 1974
+29. Which of the following is not a stage of data processing (a) processing (b) input (c) output (d) classifying
+30. ___ were used for storage in the second generation computers (a) vacumn tubes (b) transistors (c) integrated circuit (d) processors
+		ESSAY   ANSWER  ANY 4 QUESTION
+1a. What do we mean by generation of computers?
+1b. State two (2) characteristics each of first and second generation computers
+2a. List three (3) people who were inventors of electro-mechanical devices and the machine they invented
+2b. Why is Charles Babbage reffered to as the father of computer
+3a. What is data processing?
+3b. list and explain the stages involved in data processing
+4a. List six (6) features that makes a computer a excellent tool for data processing?
+4b. Explain the versitility of a computer
+5a. What do ypu understand by early conting devices?
+5b. Describe any two (2) of the following (i) abacus (ii) slide rule (iii) calculating clock

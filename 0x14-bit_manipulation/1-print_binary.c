@@ -9,21 +9,34 @@
 void print_binary(unsigned long int n)
 
 {
-	int a;
-	std: :string bin = "";
+	unsigned long int a = 1, c, d = 10, e;
 
-	for (a = 31; a >= 0; --a)
+	if (n == 0)
 	{
-		if (n & (1 << a))
-		{
-			bin += "1";
-			printf("%s", bin);
-		}
-		else
-		{
-			bin += "0";
-			printf("%s", bin);
-		}
+		printf("0");
+		return;
 	}
+	else if (n == 1)
+	{
+		printf("1");
+		return;
+	}
+	c = n & a;
+	if (c == 1)
+	{
+		e = 1;
+	}
+	a = a << 2;
+	while (a < n)
+	{
+		c = n & a;
+		if (c == 1)
+		{
+			e = d + e;
+		}
+		d = d * 10;
+		a = a << 1;
+	}
+	printf("%lu", e);
 	return;
 }

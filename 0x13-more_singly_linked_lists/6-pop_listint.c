@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stdlib.h>
+#include <stddef.h>
 /**
 * pop_listint - to delete and print the head node of a list
 * @head: the head of the linked list
