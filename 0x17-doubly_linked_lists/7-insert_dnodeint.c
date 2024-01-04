@@ -42,10 +42,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		a++;
 	}
 	free(new);
-	if (a == idx)
+	if (a == (idx - 1))
 	{
 		new = add_dnodeint_end(h, n);
-	return (new);
+		return (new);
 	}
 	return (NULL);
 }
