@@ -1,0 +1,17 @@
+CC = gcc
+SRC = $(wildcard *.c)
+NAME = school
+BIN = $(SRC:%.c=%)
+
+all: ${BIN}
+	$(foreach %,$(BIN))
+
+%.o: %.c
+	${CC} -c -o $@ $<
+
+OBJ = $(wildcard *.o)
+$(BIN): %: %.o
+	$(CC) $(OBJ) -o $(NAME)
+
+clean: $(OBJ)
+	rm $(OBJ)
