@@ -2,16 +2,19 @@ CC = gcc
 SRC = $(wildcard *.c)
 NAME = school
 BIN = $(SRC:%.c=%)
-
-all: ${BIN}
-	$(foreach %,$(BIN))
-
-%.o: %.c
-	${CC} -c -o $@ $<
-
 OBJ = $(wildcard *.o)
-$(BIN): %: %.o
-	$(CC) $(OBJ) -o $(NAME)
 
+.PHONY: all compile
+
+all: $(BIN) compile
+
+$(BIN): %: %.c
+	${CC} -c -o $@.o $<
+
+compile:
+	$(CC) $(OBJ) -o $(NAME)
+for_failed:
+	-compile
+	echo "happy"
 clean: $(OBJ)
 	rm $(OBJ)
