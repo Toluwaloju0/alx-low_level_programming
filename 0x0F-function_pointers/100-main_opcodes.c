@@ -8,7 +8,7 @@
  * Return: None
  */
 
-void main(int argc, char **argv)
+int main(int argc, char **argv)
 {
 	int a, b;
 	unsigned char *ptr = (char *)main;
@@ -36,4 +36,5 @@ void main(int argc, char **argv)
 		}
 		printf("%02x ", ptr[b]);
 	}
+	return (0);
 }
