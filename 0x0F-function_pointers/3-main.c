@@ -10,20 +10,23 @@
 
 int main(int argc, char **argv)
 {
-	int i = atoi(argv[2]), j = atoi(argv[4]), k;
-	int (*op)(int, int) = (*get_op_func(argv[3]));
+	int i = atoi(argv[1]), j = atoi(argv[3]), k;
+	int (*f)(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if (op == NULL)
+
+	f = get_op_func(argv[2]);
+
+	if (f == NULL)
 	{
 		printf("Error\n");
-		exit(100);
+		exit(99);
 	}
-	k = op(i, j);
+	k = f(i, j);
 	printf("%d\n", k);
 	return (0);
 }
