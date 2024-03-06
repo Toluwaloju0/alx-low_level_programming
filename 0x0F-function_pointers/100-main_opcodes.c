@@ -11,7 +11,7 @@
 void main(int argc, char **argv)
 {
 	int a, b;
-	unsigned char *ptr = (unsigned char *)main;
+	unsigned char *ptr = (char *)main;
 
 	if (argc != 2)
 	{
@@ -29,7 +29,11 @@ void main(int argc, char **argv)
 
 	for (b = 0; b < a; b++)
 	{
+		if (b == a - 1)
+		{
+			printf("%02x\n", ptr[b]);
+			break;
+		}
 		printf("%02x ", ptr[b]);
 	}
-	printf("\n");
 }
