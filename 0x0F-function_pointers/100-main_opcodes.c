@@ -8,10 +8,10 @@
  * Return: None
  */
 
- void main(int argc, char **argv)
- {
- 	int a, b;
-	unsigned char *ptr = (unsigned char*)main;
+void main(int argc, char **argv)
+{
+	int a, b;
+	unsigned char *ptr = (unsigned char *)main;
 
 	if (argc != 2)
 	{
