@@ -15,7 +15,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 		return (0);
 	}
-	c = strlen(b) - 1
+	c = strlen(b) - 1;
 	while (*b != '\0')
 	{
 		if (*b == '0')
