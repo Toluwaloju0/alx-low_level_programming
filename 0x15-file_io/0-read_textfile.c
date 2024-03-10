@@ -25,7 +25,11 @@ size_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	n = read(fd, buffer, letters);
-	write(1, buffer, n);
+	if (letters != n)
+	{
+		letters = n;
+	}
+	write(1, buffer, letters);
 	close(fd);
 	return (n);
 }
