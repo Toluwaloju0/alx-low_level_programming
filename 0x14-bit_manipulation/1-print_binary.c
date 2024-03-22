@@ -9,7 +9,8 @@
 void print_binary(unsigned long int n)
 
 {
-	unsigned long int a = 1, c, d = 10, e;
+	int e = 0;
+	char *b[BUFSIZ];
 
 	if (n == 0)
 	{
@@ -21,22 +22,23 @@ void print_binary(unsigned long int n)
 		printf("1");
 		return;
 	}
-	c = n & a;
-	if (c == 1)
+	while (e < BUFSIZ && n > 0)
 	{
-		e = 1;
-	}
-	a = a << 2;
-	while (a < n)
-	{
-		c = n & a;
-		if (c == 1)
+		if ((n & 1) == 1)
 		{
-			e = d + e;
+			b[e] = "1";
 		}
-		d = d * 10;
-		a = a << 1;
+		else
+		{
+			b[e] = "0";
+		}
+		n = n >> 1;
+		e++;
 	}
-	printf("%lu", e);
-	return;
+	e--;
+	while (e >= 0)
+	{
+		printf("%s", b[e]);
+		e--;
+	}
 }
