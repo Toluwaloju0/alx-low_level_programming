@@ -11,10 +11,11 @@
 * Return: 0 on sucess
 */
 
+int main(int ac, char **av);
 int main(int ac, char **av)
 
 {
-	int fd1, fd2, wrn;
+	int fd1, fd2, wrn, wrte;
 	off_t fl, a = 0;
 	char *buf[BUFSIZ + 1];
 
@@ -24,17 +25,14 @@ int main(int ac, char **av)
 		exit(97);
 	}
 	fd1 = open(av[1], O_RDWR);
-	fd2 = open(av[2], O_RDWR | O_TRUNC | O_CREAT,
-0664);
+	fd2 = open(av[2], O_RDWR | O_TRUNC | O_CREAT, 0664);
 	if (fd1 == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-		exit(98);
+		exit(0);
 	}
 	if (fd2 == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-		exit(99);
+		exit(0);
 	}
 
 	fl = lseek(fd1, 0, SEEK_END);
@@ -42,10 +40,30 @@ int main(int ac, char **av)
 	{
 		lseek(fd1, a, SEEK_SET);
 		wrn = read(fd1, buf, 1024);
-		write(fd2, buf, wrn);
+		if (wrn < 0)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+			exit(98);
+		}
+		wrte = write(fd2, buf, wrn);
+		if (wrte < 0)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+			exit(99);
+		}
 		a += 1024;
 	}
-	close(fd1);
-	close(fd2);
+	wrn = close(fd1);
+	if (wrn == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd1);
+		exit(100);
+	}
+	wrte = close(fd2);
+	if (wrte == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd2);
+		exit(100);
+	}
 	return (0);
 }
