@@ -25,12 +25,12 @@ size_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	n = read(fd, buffer, letters);
-	if (n < 0)
+	if (n == 0)
 	{
 		return (0);
 	}
 	a = write(1, buffer, n);
-	if (a <= 0)
+	if (a == 0)
 	{
 		return (0);
 	}
