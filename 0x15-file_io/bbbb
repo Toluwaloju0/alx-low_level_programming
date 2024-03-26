@@ -20,12 +20,3 @@ order specified.  Also, the placement of the -l option is significant.
 Many options have long names starting with -f or with -W---for example, -fmove-loop-invariants, -Wformat and so on.  Most
 of these have both positive and negative forms; the negative form of -ffoo is -fno-foo.  This manual documents only one of
 these two forms, whichever one is not the default.
-t be grouped: -dv is very different from -d -v.
-
-You can mix options and other arguments.  For the most part, the order you use doesn't matter.  Order does matter when you
-use several options of the same kind; for example, if you specify -L more than once, the directories are searched in the
-order specified.  Also, the placement of the -l option is significant.
-
-Many options have long names starting with -f or with -W---for example, -fmove-loop-invariants, -Wformat and so on.  Most
-of these have both positive and negative forms; the negative form of -ffoo is -fno-foo.  This manual documents only one of
-these two forms, whichever one is not the default.

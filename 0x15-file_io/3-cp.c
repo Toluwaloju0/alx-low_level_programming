@@ -14,8 +14,8 @@
 int main(int ac, char **av)
 
 {
-	int fd1, fd2, wrn, a = 0;
-	off_t fl;
+	int fd1, fd2, wrn;
+	off_t fl, a = 0;
 	char *buf[BUFSIZ + 1];
 
 	if (ac != 3)
@@ -33,15 +33,15 @@ int main(int ac, char **av)
 	}
 	if (fd2 == -1)
 	{
-                dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-		exit(99);	
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+		exit(99);
 	}
 
 	fl = lseek(fd1, 0, SEEK_END);
-	while (a < fl)
+	while (a <= fl)
 	{
 		lseek(fd1, a, SEEK_SET);
-		wrn = read(fd1, buf, fl);
+		wrn = read(fd1, buf, 1024);
 		write(fd2, buf, wrn);
 		a += 1024;
 	}
