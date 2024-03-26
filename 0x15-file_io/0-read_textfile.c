@@ -13,7 +13,7 @@ size_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	char *buffer[BUFSIZ + 1];
-	size_t n = 0;
+	size_t n = 0, a = 0;
 
 	if (filename == NULL)
 	{
@@ -25,11 +25,15 @@ size_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	n = read(fd, buffer, letters);
-	if (letters != n)
+	if (n < 0)
 	{
-		letters = n;
+		return (0);
 	}
-	write(1, buffer, letters);
+	a = write(1, buffer, n);
+	if (a <= 0)
+	{
+		return (0);
+	}
 	close(fd);
-	return (n);
+	return (a);
 }
