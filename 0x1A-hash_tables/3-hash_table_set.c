@@ -11,7 +11,7 @@
  * Return: pointer to the first elemrnt of the list
  */
 
-hash_node_t *add_node(hash_node_t **head, const char *k, const char *v)
+hash_node_t *add_node(hash_node_t *head, const char *k, const char *v)
 {
 	hash_node_t *new;
 
@@ -20,11 +20,24 @@ hash_node_t *add_node(hash_node_t **head, const char *k, const char *v)
 	{
 		return (NULL);
 	}
+	new->key = malloc(sizeof(strlen(k) + 1));
+	if (new->key == NULL)
+	{
+		free(new);
+		return (NULL);
+	}
+	new->value = malloc(sizeof(strlen(v) + 1));
+	if (new->value == NULL)
+	{
+		free(new->key);
+		free(new);
+		return (NULL);
+	}
 	new->key = strdup(k);
 	new->value = strdup(v);
-	new->next = *head;
-	*head = new;
-	return (new);
+	new->next = head;
+	head = new;
+	return (head);
 
 }
 
@@ -39,17 +52,19 @@ hash_node_t *add_node(hash_node_t **head, const char *k, const char *v)
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 {
-	unsigned long int b;
-	hash_node_t **head;
+	unsigned long int index;
+	hash_node_t *h;
 
 	if (ht == NULL || key == NULL)
 	{
 		return (0);
 	}
 
-	head = add_node(head, key, value);
-	b =  key_index((const unsigned char *)key, size2);
-	ht[b].size = b;
-	ht[b].array = head;
+	index = hash_djb2((const unsigned char*)key);
+
+	index = index % ht->size;
+
+	h = add_node(ht->array[index], key, value);
+	ht->array[index] = h;
 	return (1);
 }
