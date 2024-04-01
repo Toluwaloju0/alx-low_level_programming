@@ -16,12 +16,12 @@ hash_node_t *add_node(hash_node_t *head, const char *k, const char *v)
 {
 	hash_node_t *new;
 
-	new = malloc(sizeof(hash_node_t));
 	if (head->key != NULL)
 	{
 		if (strcmp(head->key, k) == 0)
 		{
 			free(head->value);
+			head->value = NULL;
 			head->value = malloc(sizeof(strlen(v) + 1));
 			if (head->value == NULL)
 			{
@@ -33,6 +33,7 @@ hash_node_t *add_node(hash_node_t *head, const char *k, const char *v)
 			return (head);
 		}
 	}
+	new = malloc(sizeof(hash_node_t));
 	if (new == NULL)
 	{
 		return (NULL);
