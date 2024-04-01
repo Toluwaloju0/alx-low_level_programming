@@ -16,7 +16,7 @@ hash_node_t *add_node(hash_node_t *head, const char *k, const char *v)
 {
 	hash_node_t *new;
 
-	if (head->key != NULL)
+	if (head)
 	{
 		if (strcmp(head->key, k) == 0)
 		{
