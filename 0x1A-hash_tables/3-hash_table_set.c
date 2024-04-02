@@ -11,7 +11,6 @@
  * Return: pointer to the first elemrnt of the list
  */
 
-hash_node_t *add_node(hash_node_t *head, const char *k, const char *v);
 hash_node_t *add_node(hash_node_t *head, const char *k, const char *v)
 {
 	hash_node_t *new;
@@ -42,7 +41,7 @@ hash_node_t *add_node(hash_node_t *head, const char *k, const char *v)
 		free(new);
 		return (NULL);
 	}
-	new->value = strdup(k);
+	new->value = strdup(v);
 	if (new->value == NULL)
 	{
 		free(new->key);
