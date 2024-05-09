@@ -1,9 +1,5 @@
-.PHONY: all school
 CC = gcc
-SRC = $(wildcard *c)
-BINS = $(SRC:%.c=%)
+SRC = $(wildcard *.c)
 
-all: school
-
-school:
+all:
 	${CC} $(SRC) -o school
