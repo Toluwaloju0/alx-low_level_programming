@@ -31,7 +31,7 @@ def island_perimeter(grid):
                                     perimeter += 1
 
                     return perimeter
-        return 2 * (len(grid) + len(grid[0]))
+            return 2 * (len(grid) + len(grid[0]))
 
     except Exception:
         return 0
