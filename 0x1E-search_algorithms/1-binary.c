@@ -29,7 +29,7 @@ int binary_search(int *array, size_t size, int value)
 				printf("%d\n", array[tras]);
 				break;
 			}
-			printf("%d ", array[tras]);
+			printf("%d, ", array[tras]);
 		}
 
 		search = (min + max) / 2;
