@@ -4,10 +4,12 @@
 /**
  * advanced_binary - To searcg for a value using recursive binary search
  * @array: the array to search for
- * @size the size of the array
+ * @size: the size of the array
  * @value : the value to search for
+ * Return: the index og the value searched for
  */
 
+int advanced_binary(int *array, size_t size, int value);
 int advanced_binary(int *array, size_t size, int value)
 
 {
@@ -27,7 +29,7 @@ int advanced_binary(int *array, size_t size, int value)
 			printf("%d\n", array[tras]);
 			break;
 		}
-		printf("%d ", array[tras]);
+		printf("%d, ", array[tras]);
 	}
 	mid = (min + max) / 2;
 	if (array[mid] == value && array[mid - 1] != value)
@@ -43,7 +45,7 @@ int advanced_binary(int *array, size_t size, int value)
 		{
 			return (-1);
 		}
-		return mid + 1 + a;
+		return (mid + 1 + a);
 	}
 	else if (array[mid] >= value)
 	{
@@ -53,7 +55,7 @@ int advanced_binary(int *array, size_t size, int value)
 		{
 			return (-1);
 		}
-		return mid - a;
+		return (mid - a);
 	}
 	return (-1);
 }
