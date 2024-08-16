@@ -50,7 +50,7 @@ int exponential_search(int *array, size_t size, int value)
 				printf("%d\n", array[tras]);
 				break;
 			}
-			printf("%d ", array[tras]);
+			printf("%d, ", array[tras]);
 		}
 		tras = (min + max) / 2;
 		if (array[tras] == value)
